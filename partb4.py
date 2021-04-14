@@ -39,7 +39,7 @@ df_b1.drop('Unnamed: 0', inplace=True, axis=1)
 # use porter stemmer for more advanced search
 keywords = sys.argv[1:]
 keywords = [ps.stem(w) for w in keywords]
-print(keywords)
+#print(keywords)
 
 # the file_string needs to be processed and tokenized 
 # loop through each file in cricket folder and find matches for the keywords

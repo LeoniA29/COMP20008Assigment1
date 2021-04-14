@@ -16,7 +16,7 @@ def preprocess_file(file):
          line = fd.read()
 
          # filter out non-alphabetic characters using Regular Expression
-         alpha_process = re.sub(r'[^a-zA-Z"\t""\n""\s"]', '', line)
+         alpha_process = re.sub(r'[^a-zA-Z"\t""\n""\s"]', ' ', line)
 
             
          # filter out all tabs, newlines, and spaces into one whitespace
@@ -28,5 +28,4 @@ def preprocess_file(file):
     return lower_process
 
 file = sys.argv[1]
-output = preprocess_file(file)
-print(output)
+print(preprocess_file(file))
